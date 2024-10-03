@@ -1,0 +1,23 @@
+Assignment 1 
+
+#include <stdio.h> 
+int main()
+{
+ int n,row,i,j,a=1; 
+ printf("Give the input for number of rows to be displayed: "); 
+ scanf("%d",&n); 
+ for(i=0;i<n;i++) 
+ {
+ for(row=1;row<=n-i;row++) 
+ printf(" ");
+ for(j=0;j<=i;j++) 
+ {
+ if (j==0||i==0) 
+ a=1;
+ else
+ a=a*(i-j+1)/j; 
+ printf("% 4d",a); 
+ }
+ printf("\n");
+ }
+}
